@@ -1,0 +1,46 @@
+{
+  "name": "ng2-cable",
+  "version": "1.0.5",
+  "description": "Easily integrate Rails' ActionCable into your Angular2/ionic2 application.",
+  "main": "index.js",
+  "typings": "./js/index.d.ts",
+  "dependencies": {
+    "@angular/compiler": "^2.1.0",
+    "rxjs": "5.0.0-beta.12",
+    "zone.js": "^0.6.6",
+    "actioncable": "^5.0.0"
+  },
+  "devDependencies": {
+    "@angular/core": "^2.1.0",
+    "typescript": "^2.0.3",
+    "@types/core-js": "^0.9.34"
+  },
+  "typescript": {
+    "definition": "./js/index.d.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/viktor-shmigol/ng2-cable.git"
+  },
+  "keywords": [
+    "cable",
+    "ActionCable",
+    "Angular2-cable",
+    "ng2-cable",
+    "ng2Cable",
+    "Rails",
+    "rails",
+    "Cable",
+    "Angular2",
+    "ionic2",
+    "ionic2-cable",
+    "Rails5",
+    "Action Cable"
+  ],
+  "author": "Victor Shmigol",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viktor-shmigol/ng2-cable/issues"
+  },
+  "homepage": "https://github.com/viktor-shmigol/ng2-cable#readme"
+}
