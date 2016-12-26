@@ -11,6 +11,9 @@
 
 [https://github.com/viktor-shmigol/ng2-cable-ionic2-example](https://github.com/viktor-shmigol/ng2-cable-ionic2-example)
 
+## Blog
+[https://blog.active-bridge.com/how-easily-integrate-rails-actioncable-into-your-angular2-ionic2-application](How easily integrate Rails' ActionCable into your Angular2/ionic2 application)
+
 ## Install
 
 ```bash
