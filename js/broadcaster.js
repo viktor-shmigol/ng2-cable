@@ -1,7 +1,8 @@
 "use strict";
-var Subject_1 = require('rxjs/Subject');
-require('rxjs/add/operator/filter');
-require('rxjs/add/operator/map');
+Object.defineProperty(exports, "__esModule", { value: true });
+var Subject_1 = require("rxjs/Subject");
+require("rxjs/add/operator/filter");
+require("rxjs/add/operator/map");
 var Broadcaster = (function () {
     function Broadcaster() {
         this._eventBus = new Subject_1.Subject();
