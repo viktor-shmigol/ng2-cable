@@ -13,10 +13,14 @@ export class Ng2Cable {
   subscribe(url, channel) {
     this.cable = ActionCable.createConsumer(url);
     this.subscription = this.cable.subscriptions.create(channel, {
-      received: (data)=> {
+      received: (data) => {
         this.broadcaster.broadcast((data.action || channel), data);
       }
     });
+  }
+
+  setCable(url): void {
+    this.cable = ActionCable.createConsumer(url);
   }
 
   unsubscribe() {
