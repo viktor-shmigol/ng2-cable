@@ -69,6 +69,10 @@ Method allows to subscribe to a channel.
 
 Method allows to unsubscribe from a channel.
 
+**.setCable(url)**
+
+Method allows to connect consumer
+
 ## API Broadcaster
 
 **.on<string>('Name')**
