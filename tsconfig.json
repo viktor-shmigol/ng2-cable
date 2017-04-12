@@ -1,14 +1,25 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
+    "declaration": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "mapRoot": "",
+    "module": "commonjs",
     "moduleResolution": "node",
-    "removeComments": true,
+    "noEmitOnError": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "outDir": "./js",
+    "rootDir": ".",
+    "skipLibCheck": true,
     "sourceMap": true,
-    "declaration": true,
-    "outDir": "./js"
+    "sourceRoot": "",
+    "target": "es6",
+    "lib": [
+      "es2015",
+      "es2016",
+      "es2017"
+    ]
   },
   "filesGlob": [
     "**/*.ts",

@@ -9,33 +9,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
-var ActionCable = require("actioncable");
-var broadcaster_1 = require("./broadcaster");
-var Ng2Cable = (function () {
-    function Ng2Cable(broadcaster) {
+const core_1 = require("@angular/core");
+const ActionCable = require("actioncable");
+const broadcaster_1 = require("./broadcaster");
+let Ng2Cable = class Ng2Cable {
+    constructor(broadcaster) {
         this.broadcaster = broadcaster;
     }
-    Ng2Cable.prototype.subscribe = function (url, channel) {
-        var _this = this;
-        this.cable = ActionCable.createConsumer(url);
+    subscribe(url, channel) {
+        this.setCable(url);
         this.subscription = this.cable.subscriptions.create(channel, {
-            received: function (data) {
-                _this.broadcaster.broadcast((data.action || channel), data);
+            received: (data) => {
+                this.broadcaster.broadcast((data.action || channel), data);
             }
         });
-    };
-    Ng2Cable.prototype.setCable = function (url) {
+    }
+    setCable(url) {
         this.cable = ActionCable.createConsumer(url);
-    };
-    Ng2Cable.prototype.unsubscribe = function () {
+    }
+    unsubscribe() {
         this.cable.subscriptions.remove(this.subscription);
-    };
-    return Ng2Cable;
-}());
+    }
+};
 Ng2Cable = __decorate([
     core_1.Injectable(),
     __metadata("design:paramtypes", [broadcaster_1.Broadcaster])
 ], Ng2Cable);
 exports.Ng2Cable = Ng2Cable;
-//# sourceMappingURL=ng2-cable.js.map
+//# sourceMappingURL=/home/victor/projects/ng2-cable/ts/ng2-cable.js.map
