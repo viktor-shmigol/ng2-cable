@@ -36,4 +36,4 @@ Ng2Cable = __decorate([
     __metadata("design:paramtypes", [broadcaster_1.Broadcaster])
 ], Ng2Cable);
 exports.Ng2Cable = Ng2Cable;
-//# sourceMappingURL=/home/victor/projects/ng2-cable/ts/ng2-cable.js.map
+//# sourceMappingURL=/home/victor/projects/ng2-cable/ng2-cable.js.map

@@ -17,4 +17,4 @@ class Broadcaster {
     }
 }
 exports.Broadcaster = Broadcaster;
-//# sourceMappingURL=/home/victor/projects/ng2-cable/ts/broadcaster.js.map
+//# sourceMappingURL=/home/victor/projects/ng2-cable/broadcaster.js.map

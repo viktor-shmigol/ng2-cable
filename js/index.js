@@ -5,4 +5,4 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(require("./broadcaster"));
 __export(require("./ng2-cable"));
-//# sourceMappingURL=/home/victor/projects/ng2-cable/ts/index.js.map
+//# sourceMappingURL=/home/victor/projects/ng2-cable/index.js.map
