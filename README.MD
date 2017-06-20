@@ -2,7 +2,7 @@
   <img src='http://i.imgur.com/hicMwNW.png' alt='ng-cable logoe'/>
 </p>
 
-> Easily integrate Rails 'ActionCable' into your Angular2/4/ionic2 application.
+> Easily integrate Rails 'ActionCable' into your Angular2/4/ionic3 application.
 
 ## Demo
 [https://ng2-cable-example.herokuapp.com](https://ng2-cable-example.herokuapp.com)
@@ -28,7 +28,7 @@ And if we use the SystemJS loader, we would have to add our library to the confi
         }
     });
 
-**ionic2**
+**ionic3**
 
     import { Ng2Cable, Broadcaster } from 'ng2-cable/js/index';
 
