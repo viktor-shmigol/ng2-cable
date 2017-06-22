@@ -32,9 +32,21 @@ And if we use the SystemJS loader, we would have to add our library to the confi
 
     import { Ng2Cable, Broadcaster } from 'ng2-cable/js/index';
 
-## Usage
 
-    app.ts
+## Usage
+  1. Add Ng2CableModule into your AppModule class. `app.module.ts` would look like this:
+
+    import {NgModule} from '@angular/core';
+    import { Ng2CableModule } from 'ng2-cable';
+
+    @NgModule({
+      imports: [Ng2CableModule],
+      declarations: [AppComponent],
+      bootstrap: [AppComponent],
+    })
+    export class AppModule { }
+
+  2. app.ts
 
     import { Component } from '@angular/core';
     import { Ng2Cable, Broadcaster } from 'ng2-cable';
@@ -42,23 +54,23 @@ And if we use the SystemJS loader, we would have to add our library to the confi
     @Component({
       moduleId: module.id,
       selector: 'sd-app',
-      templateUrl: 'app.component.html',
-      providers:[Ng2Cable, Broadcaster] //or add to main @NgModule
+      templateUrl: 'app.component.html'
     })
 
     export class AppComponent {
       constructor(private ng2cable: Ng2Cable,
-                  private broadcaster: Broadcaster) {
-        this.ng2cable.subscribe('http://example.com/cable', 'ChatChannel');
-        //By default event name is 'channel name'. But you can pass from backend field { action: 'MyEventName'}
+        private broadcaster: Broadcaster) {
+          this.ng2cable.subscribe('http://example.com/cable', 'ChatChannel');
+          //By default event name is 'channel name'. But you can pass from backend field { action: 'MyEventName'}
 
-        this.broadcaster.on<string>('ChatChannel').subscribe(
-          message => {
-            console.log(message);
-          }
-        );
+          this.broadcaster.on<string>('ChatChannel').subscribe(
+            message => {
+              console.log(message);
+            }
+          );
+        }
       }
-    }
+
 ## API Ng2-cable
 
 **.subscribe(url, channel)**
