@@ -6,31 +6,12 @@
   "jsnext:main": "ng2-cable.esm.js",
   "module": "ng2-cable.esm.js",
   "types": "ng2-cable.d.ts",
-  "scripts": {
-    "copy": "node tools/copy-package.js && node tools/cleanup.js",
-    "bundle": "rimraf dist && rollup -c rollup.config.umd.js && rollup -c rollup.config.esm.js && tsc",
-    "postbundle": "node tools/removecode.js",
-    "build": "npm run bundle && npm run copy",
-    "publish": "cd ./dist && npm publish"
-  },
   "dependencies": {
     "@angular/compiler": "^4.1.3",
     "@angular/core": "^4.1.3",
     "actioncable": "5.0.4",
     "rxjs": "^5.4.1",
     "zone.js": "^0.8.12"
-  },
-  "devDependencies": {
-    "@angular/compiler": "^4.1.3",
-    "@angular/compiler-cli": "^4.1.3",
-    "@types/node": "^7.0.14",
-    "del": "^2.2.2",
-    "node-sass": "^4.5.3",
-    "rollup-plugin-angular": "^0.4.4",
-    "rollup-plugin-commonjs": "^8.0.2",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "rollup-plugin-typescript": "^0.8.1",
-    "typescript": "~2.3.4"
   },
   "repository": {
     "type": "git",

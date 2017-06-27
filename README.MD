@@ -1,3 +1,5 @@
+[![](https://img.shields.io/badge/npm-v4.1.2-brightgreen.svg)](https://www.npmjs.com/package/ng2-cable)
+
 <p align="center">
   <img src='http://i.imgur.com/hicMwNW.png' alt='ng-cable logoe'/>
 </p>

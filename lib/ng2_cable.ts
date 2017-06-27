@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core'
-import * as ActionCable from 'actioncable';
+import ActionCable from 'actioncable';
 import { Broadcaster } from './broadcaster';
 
 @Injectable()
 export class Ng2Cable {
   public cable: any;
   public subscription: any;
+  public actionCable = ActionCable;
 
   constructor(private broadcaster: Broadcaster) {
   }
