@@ -11,7 +11,7 @@
 
 [https://github.com/viktor-shmigol/ng2-cable-example](https://github.com/viktor-shmigol/ng2-cable-example)
 
-[https://github.com/viktor-shmigol/ng2-cable-ionic3-example](https://github.com/viktor-shmigol/ng2-cable-ionic3-example)
+[https://github.com/viktor-shmigol/ng2-cable-ionic2-example](https://github.com/viktor-shmigol/ng2-cable-ionic2-example)
 
 ## Blog
 [How easily integrate Rails' ActionCable into your Angular2/4/ionic2 application](https://blog.active-bridge.com/how-easily-integrate-rails-actioncable-into-your-angular2-ionic2-application)

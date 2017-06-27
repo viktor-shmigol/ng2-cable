@@ -1,6 +1,6 @@
 {
   "name": "ng2-cable",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Easily integrate Rails' ActionCable into your Angular2/4/ionic2 application.",
   "main": "ng2-cable.umd.js",
   "jsnext:main": "ng2-cable.esm.js",
