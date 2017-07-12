@@ -1,36 +1,33 @@
 {
   "name": "ng2-cable",
-  "version": "2.0.2",
-  "description": "Easily integrate Rails' ActionCable into your Angular2/4/ionic2 application.",
-  "main": "ng2-cable.umd.js",
-  "jsnext:main": "ng2-cable.esm.js",
-  "module": "ng2-cable.esm.js",
-  "types": "ng2-cable.d.ts",
+  "version": "2.0.5",
+  "description": "Easily integrate Rails' ActionCable into your Angular2/4/ionic2/3 application.",
+  "main": "index.js",
   "scripts": {
-    "copy": "node tools/copy-package.js && node tools/cleanup.js",
-    "bundle": "rimraf dist && rollup -c rollup.config.umd.js && rollup -c rollup.config.esm.js && tsc",
-    "postbundle": "node tools/removecode.js",
-    "build": "npm run bundle && npm run copy",
-    "publish": "cd ./dist && npm publish"
-  },
-  "dependencies": {
-    "@angular/compiler": "^4.1.3",
-    "@angular/core": "^4.1.3",
-    "actioncable": "5.0.4",
-    "rxjs": "^5.4.1",
-    "zone.js": "^0.8.12"
+    "clean": "rimraf .tmp && rimraf dist",
+    "transpile": "ngc",
+    "package": "rollup -c",
+    "minify": "./node_modules/uglify-js/bin/uglifyjs dist/bundles/ng2-cable.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/npm-module-seed.umd.min.js",
+    "copy": "cpx './package-dist.json' dist && renamer --find 'package-dist.json' --replace 'package.json' ./dist/*",
+    "build": "npm run clean && npm run transpile && npm run package && npm run minify && npm run copy"
   },
   "devDependencies": {
-    "@angular/compiler": "^4.1.3",
-    "@angular/compiler-cli": "^4.1.3",
-    "@types/node": "^7.0.14",
-    "del": "^2.2.2",
-    "node-sass": "^4.5.3",
-    "rollup-plugin-angular": "^0.4.4",
-    "rollup-plugin-commonjs": "^8.0.2",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "rollup-plugin-typescript": "^0.8.1",
-    "typescript": "~2.3.4"
+    "@angular/compiler": "^2.4.4",
+    "@angular/compiler-cli": "^2.4.4",
+    "cpx": "^1.5.0",
+    "renamer": "^0.6.1",
+    "rimraf": "^2.5.4",
+    "rollup": "^0.41.4",
+    "typescript": "~2.0.0",
+    "uglify-js": "^2.7.5"
+  },
+  "dependencies": {
+    "@angular/common": "^2.4.4",
+    "@angular/core": "^2.4.4",
+    "@types/actioncable": "0.0.2",
+    "actioncable": "5.1.2",
+    "rxjs": "^5.0.3",
+    "zone.js": "^0.7.6"
   },
   "repository": {
     "type": "git",

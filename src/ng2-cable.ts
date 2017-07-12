@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core'
-import ActionCable from 'actioncable';
+import * as ActionCable from 'actioncable';
 import { Broadcaster } from './broadcaster';
 
 @Injectable()
@@ -11,16 +11,16 @@ export class Ng2Cable {
   constructor(private broadcaster: Broadcaster) {
   }
 
-  subscribe(url, channel) {
+  subscribe(url:string, channel:string) {
     this.setCable(url);
     this.subscription = this.cable.subscriptions.create(channel, {
-      received: (data) => {
+      received: (data:any) => {
         this.broadcaster.broadcast((data.action || channel), data);
       }
     });
   }
 
-  setCable(url): void {
+  setCable(url:string): void {
     this.cable = ActionCable.createConsumer(url);
   }
 

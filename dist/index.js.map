@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../src/index.ts"],"names":[],"mappings":"AAAA,cAAc,eAAe,CAAC;AAC9B,cAAc,aAAa,CAAC;AAC5B,cAAc,oBAAoB,CAAC","sourcesContent":["export * from './broadcaster';\nexport * from './ng2-cable';\nexport * from './ng2-cable.module';\n\ninterface DecoratorInvocation {\n  type: Function;\n  args?: any[];\n}\n"]}

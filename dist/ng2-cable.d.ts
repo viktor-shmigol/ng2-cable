@@ -1,3 +1,13 @@
-export * from './broadcaster';
-export * from './ng2_cable';
-export * from './ng2-cable.module';
+/// <reference types="actioncable" />
+import * as ActionCable from 'actioncable';
+import { Broadcaster } from './broadcaster';
+export declare class Ng2Cable {
+    private broadcaster;
+    cable: any;
+    subscription: any;
+    actionCable: typeof ActionCable;
+    constructor(broadcaster: Broadcaster);
+    subscribe(url: string, channel: string): void;
+    setCable(url: string): void;
+    unsubscribe(): void;
+}
