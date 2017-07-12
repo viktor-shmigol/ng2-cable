@@ -25,7 +25,7 @@ And if we use the SystemJS loader, we would have to add our library to the confi
 
     System.config({
         paths: {
-          'ng2-cable': 'node_modules/ng2-cable/ng2-cable.esm.js',
+          'ng2-cable': 'node_modules/ng2-cable/index.js',
           'actioncable': 'node_modules/actioncable/lib/assets/compiled/action_cable.js'
         }
     });
