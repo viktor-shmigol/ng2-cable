@@ -7,7 +7,7 @@ export declare class Ng2Cable {
     subscription: any;
     actionCable: typeof ActionCable;
     constructor(broadcaster: Broadcaster);
-    subscribe(url: string, channel: string): void;
+    subscribe(url: string, channel: string, params?: {}): void;
     setCable(url: string): void;
     unsubscribe(): void;
 }

@@ -6,10 +6,12 @@ export var Ng2Cable = (function () {
         this.broadcaster = broadcaster;
         this.actionCable = ActionCable;
     }
-    Ng2Cable.prototype.subscribe = function (url, channel) {
+    Ng2Cable.prototype.subscribe = function (url, channel, params) {
         var _this = this;
+        if (params === void 0) { params = {}; }
         this.setCable(url);
-        this.subscription = this.cable.subscriptions.create(channel, {
+        var subscriptionParams = Object.assign({ channel: channel }, params);
+        this.subscription = this.cable.subscriptions.create(subscriptionParams, {
             received: function (data) {
                 _this.broadcaster.broadcast((data.action || channel), data);
             }

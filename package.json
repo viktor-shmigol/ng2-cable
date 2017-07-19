@@ -1,6 +1,6 @@
 {
   "name": "ng2-cable",
-  "version": "2.0.5",
+  "version": "2.0.7",
   "description": "Easily integrate Rails' ActionCable into your Angular2/4/ionic2/3 application.",
   "main": "index.js",
   "scripts": {

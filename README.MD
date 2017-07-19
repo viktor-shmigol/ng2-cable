@@ -58,7 +58,7 @@ And if we use the SystemJS loader, we would have to add our library to the confi
     export class AppComponent {
       constructor(private ng2cable: Ng2Cable,
                   private broadcaster: Broadcaster) {
-          this.ng2cable.subscribe('http://example.com/cable', 'ChatChannel');
+          this.ng2cable.subscribe('http://example.com/cable', 'ChatChannel', { room: 'My room' });
           //By default event name is 'channel name'. But you can pass from backend field { action: 'MyEventName'}
 
           this.broadcaster.on<string>('ChatChannel').subscribe(
@@ -71,7 +71,7 @@ And if we use the SystemJS loader, we would have to add our library to the confi
 
 ## API Ng2-cable
 
-**.subscribe(url, channel)**
+**.subscribe(url, channel, params)**
 
 Method allows to subscribe to a channel.
 

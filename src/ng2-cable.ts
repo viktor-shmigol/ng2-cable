@@ -11,9 +11,10 @@ export class Ng2Cable {
   constructor(private broadcaster: Broadcaster) {
   }
 
-  subscribe(url:string, channel:string) {
+  subscribe(url:string, channel:string, params={}) {
     this.setCable(url);
-    this.subscription = this.cable.subscriptions.create(channel, {
+    let subscriptionParams = Object.assign({ channel: channel }, params);
+    this.subscription = this.cable.subscriptions.create(subscriptionParams, {
       received: (data:any) => {
         this.broadcaster.broadcast((data.action || channel), data);
       }
