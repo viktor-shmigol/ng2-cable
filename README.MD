@@ -83,6 +83,33 @@ Method allows to unsubscribe from a channel.
 
 Method allows to connect consumer
 
+**.actionCable**
+Returns ActionCable.
+
+So you can use it like on rails side:
+        
+    
+    import { Component } from '@angular/core';
+    import { Ng2Cable } from 'ng2-cable';
+    
+    @Component({
+      selector: 'sd-app',
+      templateUrl: 'app.component.html'
+    })
+    
+    export class AppComponent {
+      cable:any;
+      
+      constructor(private ng2cable: Ng2Cable) {
+        this.cable = this.ng2cable.actionCable.createConsumer("ws://cable.example.com");
+        this.cable.subscriptions.create('ChatChannel', {
+          received: (data:any) => {
+            console.log('DATA', data)
+          }
+        });
+      }
+    }
+
 ## API Broadcaster
 
 **.on<string>('Name')**
